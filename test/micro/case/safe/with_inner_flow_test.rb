@@ -52,7 +52,7 @@ class Micro::Case::Safe::WithInnerFlowTest < Minitest::Test
       "Wooo, you can't do this! Inherits from a use case which has an inner flow violates "\
       "one of the project principles: Solve complex business logic, by allowing the composition of use cases. "\
       "Instead of doing this, declare a new class/constant with the steps needed.\n\n"\
-      "Related issue: https://github.com/serradura/u-case/issues/19\n"
+      "Related issue: https://github.com/u-gems/u-case/issues/19\n"
 
     assert_equal(expected_message, @@__inheritance_violation_message)
 

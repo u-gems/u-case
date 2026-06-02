@@ -3,15 +3,15 @@
   <p align="center"><i>Represent use cases in a simple and powerful way: write modular, expressive, sequentially logical code.</i></p>
   <p align="center">
     <a href="https://badge.fury.io/rb/u-case"><img src="https://badge.fury.io/rb/u-case.svg" alt="Gem Version" height="18"></a>
-    <a href="https://github.com/serradura/u-case/actions/workflows/ci.yml"><img alt="Build Status" src="https://github.com/serradura/u-case/actions/workflows/ci.yml/badge.svg"></a>
+    <a href="https://github.com/u-gems/u-case/actions/workflows/ci.yml"><img alt="Build Status" src="https://github.com/u-gems/u-case/actions/workflows/ci.yml/badge.svg"></a>
     <br/>
-    <a href="https://qlty.sh/gh/serradura/projects/u-case"><img src="https://qlty.sh/gh/serradura/projects/u-case/maintainability.svg" alt="Maintainability" /></a>
-    <a href="https://qlty.sh/gh/serradura/projects/u-case"><img src="https://qlty.sh/gh/serradura/projects/u-case/coverage.svg" alt="Code Coverage" /></a>
+    <a href="https://qlty.sh/gh/u-gems/projects/u-case"><img src="https://qlty.sh/gh/u-gems/projects/u-case/maintainability.svg" alt="Maintainability" /></a>
+    <a href="https://qlty.sh/gh/u-gems/projects/u-case"><img src="https://qlty.sh/gh/u-gems/projects/u-case/coverage.svg" alt="Code Coverage" /></a>
     <br/>
     <img src="https://img.shields.io/badge/Ruby%20%3E%3D%202.7%2C%20%3C%3D%20Head-ruby.svg?colorA=444&colorB=333" alt="Ruby">
     <img src="https://img.shields.io/badge/Rails%20%3E%3D%206.0%2C%20%3C%3D%20Edge-rails.svg?colorA=444&colorB=333" alt="Rails">
   </p>
-  <p align="center">🇧🇷&nbsp;🇵🇹 <a href="https://github.com/serradura/u-case/blob/main/README.pt-BR.md">Leia este README em português</a></p>
+  <p align="center">🇧🇷&nbsp;🇵🇹 <a href="https://github.com/u-gems/u-case/blob/main/README.pt-BR.md">Leia este README em português</a></p>
 </p>
 
 > [!IMPORTANT]
@@ -19,7 +19,7 @@
 >
 > Major version bumps signal only that a Ruby or Rails version was dropped from the supported matrix — per SemVer, a dependency-floor change. Your code keeps working.
 >
-> See the full statement on [issue #131](https://github.com/serradura/u-case/issues/131#issuecomment-4531231882).
+> See the full statement on [issue #131](https://github.com/u-gems/u-case/issues/131#issuecomment-4531231882).
 
 ## Quick start <!-- omit in toc -->
 
@@ -132,15 +132,15 @@ See [Composing use cases](#composing-use-cases) and [Going further with `u-attri
 - **Exception-safe by opt-in** — [`Micro::Case::Safe`](#safe-mode--capturing-exceptions) turns unhandled exceptions into `:exception` failures.
 - **Fast** — Check out the [benchmarks](#performance), with no global state.
 
-> See a real Rails app using this gem: [from-fat-controllers-to-use-cases](https://github.com/serradura/from-fat-controllers-to-use-cases).
+> See a real Rails app using this gem: [from-fat-controllers-to-use-cases](https://github.com/u-gems/from-fat-controllers-to-use-cases).
 
 ## Documentation <!-- omit in toc -->
 
-| Version    | Documentation                                           |
-| ---------- | ------------------------------------------------------- |
-| unreleased | https://github.com/serradura/u-case/blob/main/README.md |
-| 5.7.1      | https://github.com/serradura/u-case/blob/v5.x/README.md |
-| 4.5.2      | https://github.com/serradura/u-case/blob/v4.x/README.md |
+| Version    | Documentation                                        |
+| ---------- | ---------------------------------------------------- |
+| unreleased | https://github.com/u-gems/u-case/blob/main/README.md |
+| 5.7.1      | https://github.com/u-gems/u-case/blob/v5.x/README.md |
+| 4.5.2      | https://github.com/u-gems/u-case/blob/v4.x/README.md |
 
 ## A note on syntax <!-- omit in toc -->
 
@@ -260,8 +260,8 @@ This library is tested (CI matrix) against:
 
 ## Dependencies
 
-1. **[`kind`](https://github.com/serradura/kind)** — a runtime type system for Ruby, used to validate some internal `u-case` inputs. Also exposes the [`Kind::Validator`](https://github.com/serradura/kind#kindvalidator-activemodelvalidations) that ships with [`u-case/with_activemodel_validation`](#activemodel-integration-opt-in). The examples below use `Kind.of?(SomeClass, *values)` as shorthand for runtime type checks — equivalent to `values.all? { |v| v.is_a?(SomeClass) }`.
-2. **[`u-attributes`](https://github.com/serradura/u-attributes)** — read-only attribute declarations (getters only). Used for the use case's `attributes`.
+1. **[`kind`](https://github.com/u-gems/kind)** — a runtime type system for Ruby, used to validate some internal `u-case` inputs. Also exposes the [`Kind::Validator`](https://github.com/u-gems/kind#kindvalidator-activemodelvalidations) that ships with [`u-case/with_activemodel_validation`](#activemodel-integration-opt-in). The examples below use `Kind.of?(SomeClass, *values)` as shorthand for runtime type checks — equivalent to `values.all? { |v| v.is_a?(SomeClass) }`.
+2. **[`u-attributes`](https://github.com/u-gems/u-attributes)** — read-only attribute declarations (getters only). Used for the use case's `attributes`.
 
 ## Installation
 
@@ -366,7 +366,7 @@ result.on_failure(:exception) do |data, use_case|
 end
 ```
 
-You can still `rescue` an exception explicitly inside a Safe use case — see [these test examples](https://github.com/serradura/u-case/blob/main/test/micro/case/safe_test.rb).
+You can still `rescue` an exception explicitly inside a Safe use case — see [these test examples](https://github.com/u-gems/u-case/blob/main/test/micro/case/safe_test.rb).
 
 ##### Safe flows
 
@@ -746,7 +746,7 @@ Todo::FindAllForUser
 
 #### `accept:` and `reject:` (default)
 
-Since 5.2.0, every use case includes [`u-attributes`' `accept` extension](https://github.com/serradura/u-attributes). Declare a type expectation (or any predicate) on the attribute, and the use case fails automatically with `type: :invalid_attributes` when an attribute is rejected — no need to validate inside `call!`:
+Since 5.2.0, every use case includes [`u-attributes`' `accept` extension](https://github.com/u-gems/u-attributes). Declare a type expectation (or any predicate) on the attribute, and the use case fails automatically with `type: :invalid_attributes` when an attribute is rejected — no need to validate inside `call!`:
 
 ```ruby
 class CreateUser < Micro::Case
@@ -850,7 +850,7 @@ CountPosts.call(user: nil)
 
 ##### `Kind::Validator`
 
-The [`kind` gem](https://github.com/serradura/kind) ships a [`Kind::Validator`](https://github.com/serradura/kind#kindvalidator-activemodelvalidations) for ActiveModel that validates types via its runtime type system. Requiring `'u-case/with_activemodel_validation'` also loads `Kind::Validator`:
+The [`kind` gem](https://github.com/u-gems/kind) ships a [`Kind::Validator`](https://github.com/u-gems/kind#kindvalidator-activemodelvalidations) for ActiveModel that validates types via its runtime type system. Requiring `'u-case/with_activemodel_validation'` also loads `Kind::Validator`:
 
 ```ruby
 class Todo::List::AddItem < Micro::Case
@@ -956,7 +956,7 @@ DowncaseAndDedupedTags
   .on_success { p it[:tags] } # => ["ruby", "rails"]
 ```
 
-> See [`test/micro/cases/flow/blend_test.rb`](https://github.com/serradura/u-case/blob/main/test/micro/cases/flow/blend_test.rb) for every blending combination.
+> See [`test/micro/cases/flow/blend_test.rb`](https://github.com/u-gems/u-case/blob/main/test/micro/cases/flow/blend_test.rb) for every blending combination.
 
 ##### Data accumulation through a flow
 
@@ -1080,7 +1080,7 @@ end
 CleanTags.call(input: 'Ruby, RUBY, Rails').data[:input] # => "ruby, rails"
 ```
 
-Works with `Micro::Case::Safe` too — see [`test/micro/case/safe/with_inner_flow_test.rb`](https://github.com/serradura/u-case/blob/main/test/micro/case/safe/with_inner_flow_test.rb).
+Works with `Micro::Case::Safe` too — see [`test/micro/case/safe/with_inner_flow_test.rb`](https://github.com/u-gems/u-case/blob/main/test/micro/case/safe/with_inner_flow_test.rb).
 
 #### Internal steps — `Result#then` chains
 
@@ -1511,14 +1511,14 @@ Set `disable_runtime_checks = true` for an extra few percent in production once 
 Micro::Case.config { it.disable_runtime_checks = true }
 ```
 
-Measured wins (see [`benchmarks/perfomance/runtime_checks/compare.rb`](https://github.com/serradura/u-case/blob/main/benchmarks/perfomance/runtime_checks/compare.rb)) are JIT-dependent: within noise on stock Ruby, ~3–5% on Ruby 3.2 +YJIT, ~4–7% on Ruby 4.0 +PRISM.
+Measured wins (see [`benchmarks/perfomance/runtime_checks/compare.rb`](https://github.com/u-gems/u-case/blob/main/benchmarks/perfomance/runtime_checks/compare.rb)) are JIT-dependent: within noise on stock Ruby, ~3–5% on Ruby 3.2 +YJIT, ~4–7% on Ruby 4.0 +PRISM.
 
 ### Comparisons
 
 Side-by-side implementations of the same use case in other libraries:
 
-- [Interactor](https://github.com/serradura/u-case/blob/main/comparisons/interactor.rb)
-- [u-case](https://github.com/serradura/u-case/blob/main/comparisons/u-case.rb)
+- [Interactor](https://github.com/u-gems/u-case/blob/main/comparisons/interactor.rb)
+- [u-case](https://github.com/u-gems/u-case/blob/main/comparisons/u-case.rb)
 
 [⬆️ Back to Top](#table-of-contents-)
 
@@ -1599,16 +1599,16 @@ If `CreateProfile` fails, the `User` row inserted by `CreateUser` is rolled back
 
 ### More examples
 
-- **[Users creation flow](https://github.com/serradura/u-case/blob/main/examples/users_creation)** — sanitize, validate, persist; demonstrates every composition style.
-- **[Rails app (API)](https://github.com/serradura/from-fat-controllers-to-use-cases)** — different architectures across commits; the last one uses `Micro::Case` for the business logic.
-- **[CLI calculator](https://github.com/serradura/u-case/tree/main/examples/calculator)** — Rake tasks demonstrating user-input handling and failure-type-driven control flow.
-- **[Rescuing exceptions](https://github.com/serradura/u-case/blob/main/examples/rescuing_exceptions.rb)** — patterns for exception handling inside use cases.
+- **[Users creation flow](https://github.com/u-gems/u-case/blob/main/examples/users_creation)** — sanitize, validate, persist; demonstrates every composition style.
+- **[Rails app (API)](https://github.com/u-gems/from-fat-controllers-to-use-cases)** — different architectures across commits; the last one uses `Micro::Case` for the business logic.
+- **[CLI calculator](https://github.com/u-gems/u-case/tree/main/examples/calculator)** — Rake tasks demonstrating user-input handling and failure-type-driven control flow.
+- **[Rescuing exceptions](https://github.com/u-gems/u-case/blob/main/examples/rescuing_exceptions.rb)** — patterns for exception handling inside use cases.
 
 [⬆️ Back to Top](#table-of-contents-)
 
 ## Going further with `u-attributes`
 
-`Micro::Case`'s `attribute` / `attributes` macros come from [`u-attributes`](https://github.com/serradura/u-attributes), and every feature that gem supports is available on every use case. Two patterns worth knowing — **both require [`u-attributes >= 3.1`](https://github.com/serradura/u-attributes)**:
+`Micro::Case`'s `attribute` / `attributes` macros come from [`u-attributes`](https://github.com/u-gems/u-attributes), and every feature that gem supports is available on every use case. Two patterns worth knowing — **both require [`u-attributes >= 3.1`](https://github.com/u-gems/u-attributes)**:
 
 ### Nested attributes (block form)
 
@@ -1665,7 +1665,7 @@ CreateProfile.call(
 # => Success — `address` is an Address instance inside `call!`
 ```
 
-For defaults, `allow_nil:`, custom validators, and the rest of the feature set, see the [`u-attributes`](https://github.com/serradura/u-attributes) README.
+For defaults, `allow_nil:`, custom validators, and the rest of the feature set, see the [`u-attributes`](https://github.com/u-gems/u-attributes) README.
 
 [⬆️ Back to Top](#table-of-contents-)
 
@@ -1677,7 +1677,7 @@ To install onto your local machine, run `bundle exec rake install`. To release a
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/serradura/u-case. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/u-gems/u-case. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -1685,4 +1685,4 @@ Available as open source under the terms of the [MIT License](https://opensource
 
 ## Code of Conduct
 
-Everyone interacting in the Micro::Case project's codebases, issue trackers, chat rooms, and mailing lists is expected to follow the [code of conduct](https://github.com/serradura/u-case/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Micro::Case project's codebases, issue trackers, chat rooms, and mailing lists is expected to follow the [code of conduct](https://github.com/u-gems/u-case/blob/main/CODE_OF_CONDUCT.md).

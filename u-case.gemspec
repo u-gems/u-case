@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Represent use cases in a simple and powerful way while writing modular, expressive and sequentially logical code.}
   spec.description   = %q{Represent use cases in a simple and powerful way while writing modular, expressive and sequentially logical code.}
-  spec.homepage      = 'https://github.com/serradura/u-case'
+  spec.homepage      = 'https://github.com/u-gems/u-case'
   spec.license       = 'MIT'
 
   raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.' unless spec.respond_to?(:metadata)

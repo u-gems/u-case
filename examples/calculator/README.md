@@ -3,20 +3,22 @@
 This example uses [rake](http://rubygems.org/gems/rake) to expose a CLI calculator.
 
 ## Installation instructions
+
 ```sh
 gem install rake
 gem install u-case -v 4ß.1.0
 ```
 
-*Note:*
+_Note:_
 
 If zsh is your shell, use: [`unsetopt nomatch`](https://thoughtbot.com/blog/how-to-use-arguments-in-a-rake-task) to avoid errors when invoking rake tasks with arguments.
 
 ### Usage
 
-![gif](https://github.com/serradura/u-case/blob/main/examples/calculator/assets/usage.gif?raw=true)
+![gif](https://github.com/u-gems/u-case/blob/main/examples/calculator/assets/usage.gif?raw=true)
 
 #### Listing the available rake tasks
+
 ```sh
 rake -T
 
@@ -27,6 +29,7 @@ rake -T
 ```
 
 #### Calculating integer numbers
+
 ```sh
 bundle exec rake calc:add[3,2]
 # 3 + 2 = 5
@@ -42,6 +45,7 @@ bundle exec rake calc:divide[3,2]
 ```
 
 #### Calculating float numbers
+
 ```sh
 bundle exec rake calc:divide[3.0,2.0]
 # 3.0 / 2.0 = 1.5
@@ -51,6 +55,7 @@ bundle exec rake calc:divide[-3.0,2.0]
 ```
 
 #### Calculation errors
+
 ```sh
 bundle exec rake calc:divide[4,0]
 # ERROR: divided by 0
